@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guess The Number</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div x-data="{ guess: '', num: Math.floor(Math.random() * 10), resultShown: false }" class="game-container">
+      <h2 class="title">🎯 Guess The Number (0–9)</h2>
+
+      <input type="number" x-ref="input" placeholder="Enter your guess" class="guess-input" />
+
+      <button @click="guess = $refs.input.value.trim(); resultShown = true" class="guess-button">
+        🔍 Guess
+      </button>
+
+      <div x-show="resultShown" x-transition class="result">
+        <p x-text="num == guess ? '🎉 You Win!' : '❌ You Lose!'" 
+           :class="num == guess ? 'text-green' : 'text-red'" 
+           class="result-message">
+        </p>
+        <p class="actual-number">
+          Correct Number: 
+          <span x-text="num" :class="num == guess ? 'text-green' : 'text-red'"></span>
+        </p>
+      </div>
+
+      <button @click="num = Math.floor(Math.random() * 10); guess = ''; resultShown = false; $refs.input.value=''" class="play-again">
+        🔁 Play Again
+      </button>
+    </div>
+  </div>
+</body>
+</html>

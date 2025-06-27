@@ -1,0 +1,44 @@
+.site-footer {
+    background-color: #1f2937; // Tailwind's gray-800
+    color: #d1d5db;            // Tailwind's gray-300
+    padding: 1.5rem 2rem;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+  
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+  
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+  
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+  
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+  
+      a {
+        font-size: 0.9rem;
+        color: #d1d5db;
+        text-decoration: none;
+  
+        &:hover {
+          color: white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
