@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mini Games Hub</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpine.js Example</title>
+  <!-- Alpine.js CDN -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-  <!-- 🌟 Header -->
-  <header class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-white text-2xl font-bold">🎮 Mini Games Hub</h1>
-      <nav class="space-x-4">
-        <a href="#" class="text-white hover:text-gray-100 font-medium">Home</a>
-        <a href="#games" class="text-white hover:text-gray-100 font-medium">Games</a>
-        <a href="#contact" class="text-white hover:text-gray-100 font-medium">Contact</a>
-      </nav>
-    </div>
-  </header> 
+<body>
+  <div x-data="{
+    count: 5,
+    student: { name: 'Zahra', age: 20 },
+    studentList: ['Ali', 'Zahra', 'Ahmed'],
+    students: [
+      { name: 'Ali', age: 22 },
+      { name: 'Zahra', age: 20 },
+      { name: 'Ahmed', age: 21 }
+    ]
+  }">
+    <h1 x-text="count"></h1>
+    <h1 x-text="student.name"></h1>
+    <h1 x-text="studentList[2]"></h1>
+    <h1 x-text="students[2].age"></h1>
+    <!-- looping now -->
+    <template x-for="(student,index) in studentList" :key="index">
+      <li x-text="student"></li>
+    </template>
 
-  <!-- 🔽 Page Content Placeholders -->
-  <main class="flex-grow">
-    <!-- Your games will be injected here -->
-    <section id="games" class="max-w-4xl mx-auto py-10 text-center">
-      <h2 class="text-3xl font-bold mb-6 text-indigo-700">Play Your Favorite Games</h2>
-      <p class="text-gray-600">Choose from fun little games like Number Guess, Memory Flip, Rock Paper Scissors, and more!</p>
-    </section>
-  </main>
+    <template x-for="(student,index) in students" :key="index">
 
-  <!-- 🌟 Footer -->
-  <footer class="bg-gray-800 text-gray-200">
-    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm">&copy; 2025 Mini Games Hub. All rights reserved.</p>
-      <div class="space-x-4 mt-2 md:mt-0">
-        <a href="#" class="hover:text-white text-sm">Privacy</a>
-        <a href="#" class="hover:text-white text-sm">Terms</a>
-        <a href="#contact" class="hover:text-white text-sm">Contact</a>
-      </div>
-    </div>
-  </footer>
+      <li>
+        <span x-text="student.name"></span>
+        <span x-text="student.age"></span>
+      </li>
+    </template>
+
+
+  </div>
 
 </body>
+
 </html>
