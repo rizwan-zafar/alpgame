@@ -1,0 +1,88 @@
+[
+    {
+        "MSISDN": "712",
+        "deviceDetailList": {
+            "device": [
+                {
+                    "imei": "324",
+                    "serialNumber": "FGH",
+                    "deviceEligiblity": {
+                        "deviceStatus": "Eligibal",
+                        "deviceStatusMessage": {},
+                        "openOrderDetail": {},
+                        "informationalMessageList": {
+                            "informationalMessages": [
+                                {
+                                    "message": "",
+                                    "url": ""
+                                }
+                            ]
+                        },
+                        "managerOverrideRequired": false
+                    },
+                    "deviceFeeList": {
+                        "fee": [
+                            {
+                                "SKUType": "RestpclomgFee",
+                                "SKU": "RSKFEE",
+                                "SKUGroup":"RSKFE",
+                                "fee": 470.99
+                            },
+                            {
+                                "SKUType": "RestpclomgFee",
+                                "SKU": "RSKFEE",
+                                "SKUGroup":"RSKFE",
+                                "fee": 470
+                            }
+                        ]
+                    },
+                    "IsAWREEligible": true
+                }
+            ]
+        },
+        "phpVendor": "Assur"
+    },
+    {
+        "MSISDN": "712",
+        "deviceDetailList": {
+            "device": [
+                {
+                    "imei": "324",
+                    "serialNumber": "FGH",
+                    "deviceEligiblity": {
+                        "deviceStatus": "Eligibal",
+                        "deviceStatusMessage": {},
+                        "openOrderDetail": {},
+                        "informationalMessageList": {
+                            "informationalMessages": [
+                                {
+                                    "message": "",
+                                    "url": ""
+                                }
+                            ]
+                        },
+                        "managerOverrideRequired": false
+                    },
+                    "deviceFeeList": {
+                        "fee": [
+                            {
+                                "SKUType": "RestpclomgFee",
+                                "SKU": "RSKFEE",
+                                "SKUGroup":"RSKFE",
+                                "fee": 470.99
+                            },
+                            {
+                                "SKUType": "RestpclomgFee",
+                                "SKU": "RSKFEE",
+                                "SKUGroup":"RSKFE",
+                                "fee": 470
+                            }
+                        ]
+                    },
+                    "IsAWREEligible": true
+                }
+            ]
+        },
+        "phpVendor": "Assur"
+    }
+]

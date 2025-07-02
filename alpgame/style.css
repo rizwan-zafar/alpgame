@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f7f9;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.app-container {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app-container h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #4a90e2;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.input-section input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.input-section button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-section button:hover {
+  background-color: #357ab8;
+}
+
+.task-section {
+  margin-bottom: 25px;
+}
+
+.task-section h2 {
+  color: #444;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.task-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-section li {
+  background: #f9f9f9;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-section li span {
+  flex: 1;
+}
+
+.task-section li button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-section li button.complete {
+  background-color: #28a745;
+  color: white;
+}
+
+.task-section li button.undo {
+  background-color: #dc3545;
+  color: white;
+}
+
+.task-section li button:hover {
+  opacity: 0.85;
+}
+
+.task-section .empty {
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.completed h2 {
+  color: #28a745;
+}

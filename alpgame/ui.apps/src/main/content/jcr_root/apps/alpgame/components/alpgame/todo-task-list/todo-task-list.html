@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body >
+  <div class="todoList-wrapper">
+  <div class="glass-container" x-data="{
+      task: '',
+      pendingTask: [],
+      completedTask: []
+    }" x-init="$watch('pendingTask', () => { task=''; $refs.input.focus(); })">
+    <h1>📝 My Tasks</h1>
+
+    <div class="input-section">
+      <input x-ref="input" type="text" x-model="task" @keyup.enter="if(task.trim()) pendingTask.push(task.trim())"
+        placeholder="Add a new task..." />
+      <button class="add-btn" @click="if(task.trim()) pendingTask.push(task.trim())">Add</button>
+    </div>
+    <div class="section">
+      <h2>📌 Pending</h2>
+      <div class="task-list">
+        <template x-if="pendingTask.length === 0">
+          <p class="empty">No pending tasks.</p>
+        </template>
+        <ul>
+          <template x-for="(t, index) in pendingTask" :key="index">
+            <li>
+              <span class="task-text" x-text="t"></span>
+              <button class="btn complete-btn" @click="completedTask.push(t); pendingTask.splice(index,1)">Done</button>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2>✅ Completed</h2>
+      <div class="task-list">
+        <template x-if="completedTask.length === 0">
+          <p class="empty">Nothing completed yet.</p>
+        </template>
+        <ul>
+          <template x-for="(t, index) in completedTask" :key="index">
+            <li>
+              <span class="task-text" x-text="t"></span>
+              <button class="btn undo-btn" @click="pendingTask.push(t); completedTask.splice(index,1)">Undo</button>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+</body>
+
+</html>
