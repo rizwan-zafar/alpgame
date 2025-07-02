@@ -1,10 +1,10 @@
 <header class="site-header">
   <div class="container">
-    <h1 class="logo">🎮 Mini Games Hub</h1>
-    <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#games">Games</a>
-      <a href="#contact">Contact</a>
+    <h1 class="logo">🎮 ${properties.title}</h1>
+    <nav class="nav-links" data-sly-list.allPages="${resource.getChildren}">
+      <sly data-sly-list.page="${allPages.getChildren}">
+        <a href="${page.link}.html">${page.label}</a>
+      </sly>
     </nav>
   </div>
 </header>

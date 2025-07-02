@@ -2,43 +2,59 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-06-26T16:51:12.447+05:00"
+        cq:lastModified="{Date}2025-07-02T17:29:05.528+05:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2025-06-26T16:51:12.448+05:00"
+        cq:lastRolledout="{Date}2025-07-02T17:29:05.529+05:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/alpgame/settings/wcm/templates/page-content"
-        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Number Guessing Game"
         sling:resourceType="alpgame/components/page">
         <root
-            cq:lastRolledout="{Date}2025-06-26T16:51:12.437+05:00"
+            cq:lastRolledout="{Date}2025-07-02T17:29:05.518+05:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="alpgame/components/container"
             layout="responsiveGrid">
             <container
-                cq:lastRolledout="{Date}2025-06-26T16:51:12.444+05:00"
+                cq:lastRolledout="{Date}2025-07-02T17:29:05.521+05:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="alpgame/components/container"
                 layout="responsiveGrid">
                 <title
-                    cq:lastRolledout="{Date}2025-06-26T16:51:12.446+05:00"
+                    cq:lastRolledout="{Date}2025-07-02T17:29:05.525+05:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="alpgame/components/title"/>
                 <container
-                    cq:lastRolledout="{Date}2025-06-26T16:51:12.448+05:00"
+                    cq:lastRolledout="{Date}2025-07-02T17:29:05.527+05:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="alpgame/components/container"
-                    layout="responsiveGrid"/>
+                    layout="responsiveGrid">
+                    <number_guessing_game
+                        cq:lastRolledout="{Date}2025-07-02T17:29:05.529+05:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:created="{Date}2025-06-26T17:05:51.402+05:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2025-07-02T17:29:05.528+05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="alpgame/components/alpgame/number-guessing-game"/>
+                </container>
             </container>
         </root>
+        <cq:LiveSyncConfig
+            cq:isDeep="{Boolean}true"
+            cq:master="/content/alpgame/language-master/en/number-guessing-game"
+            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
+            jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
 </jcr:root>

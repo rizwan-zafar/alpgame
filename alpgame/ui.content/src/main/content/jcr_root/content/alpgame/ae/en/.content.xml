@@ -43,6 +43,7 @@
             </container>
         </root>
         <cq:LiveSyncConfig
+            cq:excludedPaths="[number-guessing-game]"
             cq:isDeep="{Boolean}true"
             cq:master="/content/alpgame/language-master/en"
             cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
